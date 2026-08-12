@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+:root {
+  --america-laranja: #FD6A0A;
+  --america-marinho: #000D1E;
+  --america-preto: #060807;
+
+  --marinho-950: #000D1E;
+  --marinho-900: #04162C;
+  --marinho-800: #0A2240;
+  --marinho-100: #DDE5EF;
+
+  --laranja-600: #D45604;
+  --laranja-500: #FD6A0A;
+  --laranja-300: #FF9A4D;
+  --laranja-100: #FFE6D2;
+
+  --texto-suave: #B8C1CE;
+  --off-white: #F6F8FB;
+}
+
+@theme {
+  --color-america-laranja: #FD6A0A;
+  --color-america-marinho: #000D1E;
+  --color-america-preto: #060807;
+  --color-marinho-900: #04162C;
+  --color-marinho-800: #0A2240;
+  --color-marinho-100: #DDE5EF;
+  --color-laranja-600: #D45604;
+  --color-laranja-500: #FD6A0A;
+  --color-laranja-300: #FF9A4D;
+  --font-montserrat: var(--font-montserrat), sans-serif;
+  --font-inter: var(--font-inter), sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #000D1E;
+  color: #FFFFFF;
+}
+
+body {
+  background-color: #000D1E;
+  color: #FFFFFF;
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-montserrat), sans-serif;
+    font-weight: 800;
+  }
+}
+
+/* Elementos visuais característicos da marca América Energia Solar */
+.bg-diagonals {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(253, 106, 10, 0.04),
+    rgba(253, 106, 10, 0.04) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
+
+.card-brand-border {
+  border: 1px solid rgba(253, 106, 10, 0.2);
+  transition: all 0.3s ease;
+}
+
+.card-brand-border:hover {
+  border-color: rgba(253, 106, 10, 0.8);
+  box-shadow: 0 10px 30px -10px rgba(253, 106, 10, 0.25);
+}
+
+.btn-america {
+  background-color: #FD6A0A;
+  color: #060807;
+  font-weight: 700;
+  border-radius: 9999px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-america:hover {
+  background-color: #FF9A4D;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(253, 106, 10, 0.4);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #000D1E;
+}
+::-webkit-scrollbar-thumb {
+  background: #0A2240;
+  border-radius: 5px;
+  border: 2px solid #000D1E;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FD6A0A;
+}
